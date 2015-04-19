@@ -1,6 +1,6 @@
 [package]
 name        = "zipWith"
-version     = "0.1.0"
+version     = "0.2.0"
 authors     = ["kjgorman <kieran@kjgorman.com>"]
 description = "An iterator for zipping with a combination function"
 homepage    = "https://github.com/kjgorman/zipWith.rs"
