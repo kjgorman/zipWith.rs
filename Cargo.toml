@@ -1,0 +1,12 @@
+[package]
+name        = "zipWith"
+version     = "0.1.0"
+authors     = ["kjgorman <kieran@kjgorman.com>"]
+description = "An iterator for zipping with a combination function"
+homepage    = "https://github.com/kjgorman/zipWith.rs"
+license     = "MIT"
+keywords    = ["zipWith", "zip"]
+
+[lib]
+name        = "zipWith"
+path        = "src/lib.rs"
