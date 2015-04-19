@@ -26,13 +26,12 @@ impl<A, B, C, D> Iterator for ZipWith<A, B, C>
     }
 }
 
-pub trait IntoZipWith {
+pub trait IntoZipWith: IntoIterator + Sized {
     fn zip_with<R, F, S>(self, other: R, zipper: F)
                            -> ZipWith<Self::IntoIter, R::IntoIter, F>
 
-        where Self: Sized + IntoIterator,
-                 R: Sized + IntoIterator,
-                 F: Fn(Self::Item, R::Item) -> S
+        where R: Sized + IntoIterator,
+              F: Fn(Self::Item, R::Item) -> S
     {
         ZipWith { left: self.into_iter(), right: other.into_iter(), zipper: zipper }
     }
